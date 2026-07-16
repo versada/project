@@ -53,6 +53,9 @@
             ref="project.project_sharing_project_task_view_kanban"
         />
         <field name="arch" type="xml">
+            <xpath expr="//field[@name='name']" position="after">
+                <field name="active" invisible="1" />
+            </xpath>
             <!-- Show display_name (with id) instead of just name. -->
             <xpath expr="//field[@name='name']" position="attributes">
                 <attribute name="invisible">1</attribute>
